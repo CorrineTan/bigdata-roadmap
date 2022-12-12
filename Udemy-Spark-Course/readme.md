@@ -66,7 +66,7 @@ Reduce: combine all different values for a given key value and boik things down 
 
 Nothing actually happens in your drive program, until and action is called.
 
-#### Example code 1: fundemental RDD usage - 
+#### Example code 1: fundemental RDD usage - count_ratings
 https://github.com/CorrineTan/spark-roadmap/blob/main/Udemy-Spark-Course/count_ratings.py
 
 Data source:  MovieLens 100K Dataset  - https://grouplens.org/datasets/movielens/100k/
@@ -84,6 +84,17 @@ reduceByKey(): combine values with the same key using some function. e.x.
 rdd.reduceByKey(lambda x, y: x+y)         --- adds them up
 ```
 
+Group values wit the same key: groupByKey()
+
 Sort RDD by key values: sortByKey()
 
-keys(), values(): create an RDD for just keys or values
+Create an RDD for just keys or values: keys(), values()
+
+mapValues() and flatMapValues() if transformation doesn't affected the keys, because it's more efficient.
+
+- SQL-style: join, rightOuterJoin, leftOuterJoin, cogroup, subtractByKey
+
+#### Example code 2: Key/Value RDD's - count_friends_age
+https://github.com/CorrineTan/spark-roadmap/blob/main/Udemy-Spark-Course/count_friends_age.py
+
+Data source: fakefriends Dataset - https://github.com/PacktPublishing/Frank-Kanes-Taming-Big-Data-with-Apache-Spark-and-Python/blob/master/fakefriends.csv
