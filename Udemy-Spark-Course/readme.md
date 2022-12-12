@@ -66,4 +66,5 @@ Reduce: combine all different values for a given key value and boik things down 
 
 Nothing actually happens in your drive program, until and action is called.
 
-**** Example code: fundemental RDD usage - 
+#### Example code 1: fundemental RDD usage - 
+https://github.com/CorrineTan/spark-roadmap/blob/main/Udemy-Spark-Course/count_ratings.py
