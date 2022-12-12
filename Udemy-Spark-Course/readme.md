@@ -21,4 +21,4 @@ res0: String = /usr/local/Cellar/apache-spark/3.3.1/libexec
 
 Spark can slice and dice the data up; distribute processing amongst a huge cluster of computers; divide and conquer:
 
-<img src="https://github.com/CorrineTan/spark-roadmap/blob/main/Images/spark_high_level.png" height="400" width="700">
+<img src="https://github.com/CorrineTan/spark-roadmap/blob/main/Images/spark_high_level.png" height="520" width="900">
