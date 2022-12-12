@@ -6,4 +6,6 @@ Corrine Tan's Personal Learning Roadmap of Apache Spark
 Frank-Kanes-Taming-Big-Data-with-Apache-Spark-and-Python
 Public
 
-`<!-- In Progress -->`
+{::comment}
+In Progress
+{:/comment}
