@@ -32,10 +32,10 @@ Hadoop MapReduce is 100 times slower than Spark in some cases, and 10 times fast
 sc.textfile(file:///path) or sc.textfile(s3n:///path) or sc.textfile(hdfs:///path)
 
 - Create RDD from Hive: 
-
+```
 hiveCtx = HiveContext(sc) 
 rows = hiveCTX.sql("SELECT ...")
-
+```
 - RDD can alse be created from: 
 
 JDB/ODBC(interface of SQL database), Cassandra(no SQL database), HBase, ElasticSearch, JSON/CSV/object/sequence files
@@ -68,3 +68,22 @@ Nothing actually happens in your drive program, until and action is called.
 
 #### Example code 1: fundemental RDD usage - 
 https://github.com/CorrineTan/spark-roadmap/blob/main/Udemy-Spark-Course/count_ratings.py
+
+Data source:  MovieLens 100K Dataset  - https://grouplens.org/datasets/movielens/100k/
+
+#### Key/Value RDD's
+- Just map pairs of data into RDD. e.x.
+```
+totalsByAge = rdd.map(lambda x: (x,1))
+```
+
+- Special things Spark do for special stuff with Key/Value data:
+
+reduceByKey(): combine values with the same key using some function. e.x.
+```
+rdd.reduceByKey(lambda x, y: x+y)         --- adds them up
+```
+
+Sort RDD by key values: sortByKey()
+
+keys(), values(): create an RDD for just keys or values
