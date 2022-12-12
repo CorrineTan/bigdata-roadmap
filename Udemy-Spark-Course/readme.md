@@ -65,3 +65,5 @@ Reduce: combine all different values for a given key value and boik things down 
 - Lazy Evaluation:
 
 Nothing actually happens in your drive program, until and action is called.
+
+**** Example code: fundemental RDD usage - 
