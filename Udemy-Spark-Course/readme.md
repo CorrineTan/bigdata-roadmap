@@ -1,4 +1,4 @@
-## Notes Udemy course - Apache Spark
+## Notes of Udemy course - Apache Spark
 
 #### Install Pyspark
 - To check where does it install:
