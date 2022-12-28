@@ -29,6 +29,7 @@ Fast Data Processing with Spark by Holden Karau
 
 Resilient Distributed Datasets: A Fault-Tolerant
 Abstraction for In-Memory Cluster Computing
+
 https://www2.eecs.berkeley.edu/Pubs/TechRpts/2011/EECS-2011-82.pdf
 
 
