@@ -21,6 +21,7 @@ Notes taken from Chinese course
 ### Step 2: [Book-Spark-Notes](https://github.com/CorrineTan/spark-roadmap/tree/main/Books-Spark)  
 
 Learning Spark Lightning Fast Data Analytics by Jules S. Damji, 2nd Edition
+
 Fast Data Processing with Spark by Holden Karau
 
 
