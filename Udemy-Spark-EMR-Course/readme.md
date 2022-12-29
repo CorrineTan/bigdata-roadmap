@@ -1,1 +1,0 @@
-## Notes Udemy course - Apache Spark on EMR
