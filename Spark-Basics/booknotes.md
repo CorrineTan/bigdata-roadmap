@@ -23,7 +23,10 @@ RDD 如果丢失分区： Lineage重建丢失的分区
 Spark架构基本概念：<br>
 Driver：用户编写的数据处理逻辑，其中包含用户创建的sparkcontext。<br>
 SparkContext： 用户逻辑与Spark集群的交互接口。与Cluster Manager交互以获取资源。<br>
-Cluster Manager：负责集群的资源管理和调度。支持standalone，apache mesos和hadoop的yarn。<br>
+Cluster Manager：负责集群的资源管理和调度。支持standalone，apache Mesos和hadoop的yarn。<br>
+Worker node： 集群中可以执行计算任务的节点。
+Executor：在一个worker node上为某个application启动的一个进程。该进程负责运行任务，并负责将数据存在内存或磁盘上。
+
 
 
 
