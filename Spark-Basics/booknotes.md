@@ -21,17 +21,24 @@ RDD高度受限 - 只读记录分区的集合。只能允许执行确定的转�
 RDD 如果丢失分区： Lineage重建丢失的分区
 
 Spark架构基本概念：<br>
-Driver：用户编写的数据处理逻辑，其中包含用户创建的sparkcontext。<br>
-SparkContext： 用户逻辑与Spark集群的交互接口。与Cluster Manager交互以获取资源。<br>
-Cluster Manager：负责集群的资源管理和调度。支持standalone，apache Mesos和hadoop的yarn。<br>
-Worker node： 集群中可以执行计算任务的节点。
-Executor：在一个worker node上为某个application启动的一个进程。该进程负责运行任务，并负责将数据存在内存或磁盘上。
+- Driver：用户编写的数据处理逻辑，其中包含用户创建的sparkcontext。<br>
+- SparkContext： 用户逻辑与Spark集群的交互接口。与Cluster Manager交互以获取资源。<br>
+- Cluster Manager：负责集群的资源管理和调度。支持standalone，apache Mesos和hadoop的yarn。<br>
+- Worker node： 集群中可以执行计算任务的节点。
+- Executor：在一个worker node上为某个application启动的一个进程。该进程负责运行任务，并负责将数据存在内存或磁盘上。
 
-
+Two types of Tasks：<br>
+- Shuffle Map Task: 实现数据的重新洗牌，洗牌的结果保存到executor所在的node的文件系统中。<br>
+- Result Task: 负责生成结果数据。 <br>
 
 
 Spark submit流程：<br>
-1. 
+1. 创建sparkcontext，由其连接到cluster manager。<br>
+2. cluster manager根据用户提交时设置的cpu和内存等信息位被刺提交分配资源，启动executor。<br>
+3. driver会将用户程序划分为不同的执行阶段，每个执行阶段有一组完全相同的task组成。这些task分别作用于待处理数据的不同分区。在阶段划分完成和task创建后，driver会向executor发送task。 <br> 
+4. executor接收到task后，下载task运行时的dependency。准备好环境后开始执行task，并将task运行状态汇报给driver。<br> 
+5. driver根据收到的task运行状态来处理不同的状态更新。<br> 
+6. driver不断调用task，将task
 
 
 #### 第二章 Spark环境搭建
