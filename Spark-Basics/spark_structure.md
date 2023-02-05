@@ -11,4 +11,4 @@ Cluster:
 
 1). intermediate resule put into a distributed memory, instead of a HDFS block. 
 
-![spark](./Images/spark1.png)
+![spark](https://github.com/CorrineTan/bigdata-roadmap/blob/main/Images/spark1.png)
