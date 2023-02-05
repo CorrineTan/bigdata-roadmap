@@ -11,4 +11,4 @@ Cluster:
 
 1). intermediate resule put into a distributed memory, instead of a HDFS block. 
 
-![profile](images/spark1.png)
+![spark](Images/spark1.png)
