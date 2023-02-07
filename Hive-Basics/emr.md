@@ -189,12 +189,19 @@ How does Tez speed up:
 (tbd)
 
 #### Tez - Container Re-use
+(tbd)
 
 #### Tez - Sessions
+(tbd)
 
 #### Tez - Customization Core Engine
+(tbd)
 
 #### Tez UI and Local Mode
+(tbd)
+
+#### Databases and tables in Hive
+
 
 
 
